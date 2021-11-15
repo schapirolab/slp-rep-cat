@@ -12,9 +12,9 @@ During sleep, the model autonomously replays stimuli it learned  while awake and
 3. Click the "Train" button on the top left. When you do this, the following will happen:
   i) The model will learn the satellite task in its awake state. You should see blocks of training and testing occuring sequentially until the model hits a learning criterion of 0.66 (66% accuracy on the task).  
   ii) The model will now switch to sleep and will begin replaying the information it just learned during the wake state. At various points the model will fall into periods of high stability which the model will reinforce by contrasting it with immediately following periods of lower stability. The stability measure is displayed at the bottom of the screen as "AvgLaySim", periods of high stability are the "plus phase" of the model and subsequent periods of low stability are the "minus phase".  
-  iii) After 10,000 cycles of sleep, the model will switch back to a wake state and will immediately run a test block to measure if there has been an improvement in performance through the learning that occured during sleep.
+  iii) After 30,000 cycles of sleep, the model will switch back to a wake state and will immediately run a test block to measure if there has been an improvement in performance through the learning that occured during sleep.
 
 ## Variables that control sleep behaviour:
-The model relies on two mechanisms during sleep - (i) Synaptic Depression which allows the model to move between attractors (periods of high stability) and (ii) Oscillating Inhibition which reveals useful contrastive learning states.  
-Synaptic depression is controlled by the "inc" and "dec" parameters which specify the rate of increase and recovery from synaptic depression over time, respectively.  
-Layers in the network recieve either high or low amplitude oscillating inhibition. The amplitude for each is controlled via a sin wave equation which can be edited to change the various properties of the oscillations.
+The model relies on two mechanisms during sleep - (i) Short-term Synaptic Depression which destabilizes item attractors and (ii) Oscillating Inhibition which reveals useful contrastive learning states in destabilized item attractors.
+Synaptic depression is controlled by the "inc" and "dec" parameters which specify the rate of increase and recovery from synaptic depression over time, respectively (see line 493).  
+Layers in the network recieve either high or low amplitude oscillating inhibition (see line 1128). The amplitude for each is controlled via a sinusoidal equation which can be edited to change the various properties of the oscillations (see line 1556).
