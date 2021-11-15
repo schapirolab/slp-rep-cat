@@ -2,10 +2,11 @@
 
 Hippocampal-Cortical Model Simulation of Category Learning Consolidation over one night of sleep
 
-This is a hippocampal-cortical model of sleep consolidation. The architecture includes C-HORSE, our model of the hippocampus (see [Zhou et. al. 2021](https://www.biorxiv.org/content/10.1101/2021.07.29.454337v1) and [Schapiro et. al. 2017a](https://cb17cd36-5a57-45de-9d66-0b98a3dc5be9.filesusr.com/ugd/b37d16_5edf4f04f8fb4f8eb717d38e4ca42c3e.pdf)) and a neocortical layer as the target of consolidation.
+This is a hippocampal-cortical model of sleep consolidation. The architecture includes C-HORSE, our model of the hippocampus (see [Zhou et. al. 2021](https://www.biorxiv.org/content/10.1101/2021.07.29.454337v1) and [Schapiro et. al. 2017a](https://cb17cd36-5a57-45de-9d66-0b98a3dc5be9.filesusr.com/ugd/b37d16_5edf4f04f8fb4f8eb717d38e4ca42c3e.pdf)) and a neocortical layer as the target of consolidation. Architecture Schematic:
 
-Architecture Schematic:
-![image](https://user-images.githubusercontent.com/6560969/141707376-57ff5ae2-2385-4ee6-a1f5-0735975ad8f2.png)
+![image](https://user-images.githubusercontent.com/6560969/141707376-57ff5ae2-2385-4ee6-a1f5-0735975ad8f2.png) 
+
+
 
 During sleep, the model autonomously replays stimuli it learned  while awake and uses an oscillation-based learning rule during sleep in order to improve its own performance. This version is set up to simulate the structured satellite learning task from [Schapiro et al. 2017b](https://www.nature.com/articles/s41598-017-12884-5.pdf).
 
