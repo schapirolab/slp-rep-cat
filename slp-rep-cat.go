@@ -1553,8 +1553,8 @@ func (ss *Sim) SleepTrial() {
 
 	// Added for inhib oscill
 	c := make([][]float64, 2)
-	HighOscillAmp := 0.05 // 0.1 // 0.07
-	LowOscillAmp := 0.015  // 0.07 // 0.05
+	HighOscillAmp := 0.05
+	LowOscillAmp := 0.015
 	OscillPeriod := 50.
 	OscillMidline := 1.0
 
