@@ -13,6 +13,8 @@ During sleep, the model autonomously replays stimuli it learned  while awake and
   i) The model will learn the satellite task in its awake state. You should see blocks of training and testing occuring sequentially until the model hits a learning criterion of 0.66 (66% accuracy on the task).  
   ii) The model will now switch to sleep and will begin replaying the information it just learned during the wake state. At various points the model will fall into periods of high stability which the model will reinforce by contrasting it with immediately following periods of lower stability. The stability measure is displayed at the bottom of the screen as "AvgLaySim", periods of high stability are the "plus phase" of the model and subsequent periods of low stability are the "minus phase".  
   iii) After 30,000 cycles of sleep, the model will switch back to a wake state and will immediately run a test block to measure if there has been an improvement in performance through the learning that occured during sleep.
+  
+Note that the hippocampal projections are not actively learning during sleep so all performance changes are an outcome of learning in the cortical proejctions.
 
 ## Variables that control sleep behaviour:
 The model relies on two mechanisms during sleep - (i) Short-term Synaptic Depression which destabilizes item attractors and (ii) Oscillating Inhibition which reveals useful contrastive learning states in destabilized item attractors.
