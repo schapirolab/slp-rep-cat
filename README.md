@@ -4,6 +4,9 @@ Hippocampal-Cortical Model Simulation of Category Learning Consolidation over on
 
 This is a hippocampal-cortical model of sleep consolidation. The architecture includes C-HORSE, our model of the hippocampus (see [Zhou et. al. 2021](https://www.biorxiv.org/content/10.1101/2021.07.29.454337v1) and [Schapiro et. al. 2017a](https://cb17cd36-5a57-45de-9d66-0b98a3dc5be9.filesusr.com/ugd/b37d16_5edf4f04f8fb4f8eb717d38e4ca42c3e.pdf)) and a neocortical layer as the target of consolidation.
 
+Architecture Schematic:
+![image](https://user-images.githubusercontent.com/6560969/141707376-57ff5ae2-2385-4ee6-a1f5-0735975ad8f2.png)
+
 During sleep, the model autonomously replays stimuli it learned  while awake and uses an oscillation-based learning rule during sleep in order to improve its own performance. This version is set up to simulate the structured satellite learning task from [Schapiro et al. 2017b](https://www.nature.com/articles/s41598-017-12884-5.pdf).
 
 ## How to run:
@@ -14,7 +17,7 @@ During sleep, the model autonomously replays stimuli it learned  while awake and
   ii) The model will now switch to sleep and will begin replaying the information it just learned during the wake state. At various points the model will fall into periods of high stability which the model will reinforce by contrasting it with immediately following periods of lower stability. The stability measure is displayed at the bottom of the screen as "AvgLaySim", periods of high stability are the "plus phase" of the model and subsequent periods of low stability are the "minus phase".  
   iii) After 30,000 cycles of sleep, the model will switch back to a wake state and will immediately run a test block to measure if there has been an improvement in performance through the learning that occured during sleep.
   
-Note that the hippocampal projections are not actively learning during sleep so all performance changes are an outcome of learning in the cortical proejctions.
+Note that the hippocampal projections are not actively learning during sleep so all performance changes are an outcome of learning in the cortical projections.
 
 ## Variables that control sleep behaviour:
 The model relies on two mechanisms during sleep - (i) Short-term Synaptic Depression which destabilizes item attractors and (ii) Oscillating Inhibition which reveals useful contrastive learning states in destabilized item attractors.
